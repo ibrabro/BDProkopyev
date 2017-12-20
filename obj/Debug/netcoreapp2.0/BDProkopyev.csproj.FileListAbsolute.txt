@@ -1,0 +1,10 @@
+/home/ibra/projects/dotnet/BDProkopyev/bin/Debug/netcoreapp2.0/BDProkopyev.deps.json
+/home/ibra/projects/dotnet/BDProkopyev/bin/Debug/netcoreapp2.0/BDProkopyev.runtimeconfig.json
+/home/ibra/projects/dotnet/BDProkopyev/bin/Debug/netcoreapp2.0/BDProkopyev.runtimeconfig.dev.json
+/home/ibra/projects/dotnet/BDProkopyev/bin/Debug/netcoreapp2.0/BDProkopyev.dll
+/home/ibra/projects/dotnet/BDProkopyev/bin/Debug/netcoreapp2.0/BDProkopyev.pdb
+/home/ibra/projects/dotnet/BDProkopyev/obj/Debug/netcoreapp2.0/BDProkopyev.csproj.CoreCompileInputs.cache
+/home/ibra/projects/dotnet/BDProkopyev/obj/Debug/netcoreapp2.0/BDProkopyev.AssemblyInfoInputs.cache
+/home/ibra/projects/dotnet/BDProkopyev/obj/Debug/netcoreapp2.0/BDProkopyev.AssemblyInfo.cs
+/home/ibra/projects/dotnet/BDProkopyev/obj/Debug/netcoreapp2.0/BDProkopyev.dll
+/home/ibra/projects/dotnet/BDProkopyev/obj/Debug/netcoreapp2.0/BDProkopyev.pdb

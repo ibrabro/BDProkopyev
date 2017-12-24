@@ -12,22 +12,41 @@ namespace BDProkopyev
             using (var conn = new NpgsqlConnection(connString))
             {
                 conn.Open();
-
-                // Insert some data
-                using (var cmd = new NpgsqlCommand())
+                for(int i = 0; i < 10; i++)
                 {
-                    cmd.Connection = conn;
                     
-                    cmd.CommandText = "INSERT INTO students (name, phone, address) VALUES ('Иванов Иван Иванович', 2432323, 'DU, 3/1, 201')";
-                    // cmd.Parameters.AddWithValue("p", "Hello world");
-                    cmd.ExecuteNonQuery();
+
+                    // Insert some data
+                    using (var cmd = new NpgsqlCommand())
+                    {
+                        string n,a;
+                        int p;
+                        cmd.Connection = conn;
+                        
+                            // Console.WriteLine("Введите имя:");
+                            // n = Console.ReadLine();
+                            // Console.WriteLine("Введите телефон:");
+                            // p = Convert.ToInt32(Console.ReadLine());
+                            // Console.WriteLine("Введите адрес:");
+                            // a = Console.ReadLine();
+                            n = String.Format("teacher{0}", i);
+                            // a = String.Format("Department{0}", i);
+                            p = 255353 + i;
+                            cmd.CommandText = "INSERT INTO teachers (name, phone) VALUES (@n, @p)";
+
+                            cmd.Parameters.AddWithValue("n", n);
+                            cmd.Parameters.AddWithValue("p", p);
+                            // cmd.Parameters.AddWithValue("a", a);
+                            cmd.ExecuteNonQuery();
+                        
+                    }
                 }
 
                 // Retrieve all rows
-                using (var cmd = new NpgsqlCommand("SELECT name FROM students", conn))
+                using (var cmd = new NpgsqlCommand("SELECT * FROM teachers", conn))
                 using (var reader = cmd.ExecuteReader())
                     while (reader.Read())
-                        Console.WriteLine(reader.GetString(0));
+                        Console.WriteLine("{0}  {1}",reader.GetString(0), reader.GetString(1));//, reader.GetInt32(2));
             }
         }
     }
